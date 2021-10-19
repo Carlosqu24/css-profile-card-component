@@ -1,0 +1,84 @@
+// COLORS
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desatured-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background: $dark-cyan;
+
+    .flex {
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .card {
+            width: 326px;
+            overflow: hidden;
+
+            background-color: #fff;
+            border-radius: 16px;
+
+            &-header {
+                display: block;
+                width: 100%;
+            }
+
+            &-body {
+                border-bottom: 1px solid $dark-gray;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                &-img {
+                    margin-top: calc(-48px - 5px);
+
+                    border: 2px solid #fff;
+                    border-radius: 50%;
+                }
+
+                &-title {
+                    margin-top: 2rem;
+                    font-size: 2rem;
+
+                    span {
+                        color: $dark-gray;
+                        font-weight: 400;
+                    }
+                }
+
+                &-text {
+                    margin-bottom: 2rem;
+                    color: $dark-gray;
+                    font-size: 1.4rem;
+                }
+            }
+
+            &-footer {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+    }
+}
